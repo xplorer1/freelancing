@@ -7,6 +7,10 @@ import Services from "./components/services";
 import ContactUs from "./components/contactus";
 import BrowseJobs from "./components/browsejobs";
 import BrowseFreelancers from "./components/browsefreelancers";
+import BrowseEmployers from "./components/browseemployers";
+import LoginEmployee from "./components/loginemployee";
+import SignUpSelection from "./components/signupselection";
+import SignUpEmployee from "./components/signupemployee";
 
 function App() {
     return (
@@ -18,6 +22,10 @@ function App() {
 				<Route path="/contactus" component = {ContactUs} />
 				<Route path="/browsejobs" component = {BrowseJobs} />
 				<Route path="/browsefreelancers" component = {BrowseFreelancers} />
+				<Route path="/browseemployers" component = {BrowseEmployers} />
+				<Route path="/loginemployee" component = {LoginEmployee} />
+				<Route path="/signupselection" component = {SignUpSelection} />
+				<Route path="/signupemployee" component = {SignUpEmployee} />
 			</Switch>
         </Router>
     )
