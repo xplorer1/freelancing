@@ -15,7 +15,7 @@ class StatikComponent extends React.Component {
                     <div className="header__left">
                         <ul className="menu text-justify">
 
-                            <li><Link to="/about">About Us</Link></li>
+                            <li><Link to="/postjob">About Us</Link></li>
                             <li><Link to="/services">Services</Link></li>
 
                             <li><Link to="/contactus">Contact Us</Link></li>

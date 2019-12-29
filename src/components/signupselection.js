@@ -14,7 +14,7 @@ class SignUpSelection extends React.Component {
                 <div className="ps-page ps-page--account bg--cover" id="signup-selection"
                      style={{backgroundImage: "url('assets/img/bg/account-selection.jpg')"}}>
                     <div className="ps-page__header">
-                        <Link className="ps-logo" to="/">
+                        <Link className="ps-logo hm" to="/">
                             Home
                         </Link>
 
@@ -52,7 +52,7 @@ class SignUpSelection extends React.Component {
                                 </div>
                             </div>
                             <div className="ps-form__footer">
-                                <button className="ps-btn ps-btn--black">Next</button>
+                                <Link className="ps-btn ps-btn--black" to="/signupemployee">Next</Link>
                             </div>
                         </form>
                     </div>

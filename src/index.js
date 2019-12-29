@@ -11,6 +11,7 @@ import BrowseEmployers from "./components/browseemployers";
 import LoginEmployee from "./components/loginemployee";
 import SignUpSelection from "./components/signupselection";
 import SignUpEmployee from "./components/signupemployee";
+import PostJob from "./components/postajob";
 
 function App() {
     return (
@@ -26,6 +27,7 @@ function App() {
 				<Route path="/loginemployee" component = {LoginEmployee} />
 				<Route path="/signupselection" component = {SignUpSelection} />
 				<Route path="/signupemployee" component = {SignUpEmployee} />
+				<Route path="/postjob" component = {PostJob} />
 			</Switch>
         </Router>
     )
