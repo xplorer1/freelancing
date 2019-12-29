@@ -17291,3 +17291,12 @@ html .bg--parallax {
 .hm {
   font-size: 16pt;
 }
+
+.authh {
+  height: 75px;
+}
+
+.header-auth {
+  display: flex;
+  align-items: center;
+}

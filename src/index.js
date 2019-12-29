@@ -8,9 +8,10 @@ import ContactUs from "./components/contactus";
 import BrowseJobs from "./components/browsejobs";
 import BrowseFreelancers from "./components/browsefreelancers";
 import BrowseEmployers from "./components/browseemployers";
-import LoginEmployee from "./components/loginemployee";
+import Login from "./components/login";
 import SignUpSelection from "./components/signupselection";
 import SignUpEmployee from "./components/signupemployee";
+import SignUpEmployer from "./components/signupemployer";
 import PostJob from "./components/postajob";
 
 function App() {
@@ -24,9 +25,10 @@ function App() {
 				<Route path="/browsejobs" component = {BrowseJobs} />
 				<Route path="/browsefreelancers" component = {BrowseFreelancers} />
 				<Route path="/browseemployers" component = {BrowseEmployers} />
-				<Route path="/loginemployee" component = {LoginEmployee} />
+				<Route path="/login" component = {Login} />
 				<Route path="/signupselection" component = {SignUpSelection} />
 				<Route path="/signupemployee" component = {SignUpEmployee} />
+				<Route path="/signupemployer" component = {SignUpEmployer} />
 				<Route path="/postjob" component = {PostJob} />
 			</Switch>
         </Router>

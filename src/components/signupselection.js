@@ -5,8 +5,35 @@ class SignUpSelection extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {}
+        this.state = {
+            selectedvalue: ""
+        }
     }
+
+    handleInput = (e) => {
+        this.setState({
+            selectedvalue: e.target.value
+        });
+    };
+
+    handleSignUpSelection = (e) => {
+        e.preventDefault();
+        let destination = this.state.selectedvalue;
+
+        switch (destination) {
+            case "signupemployer":
+                this.props.history.push('/signupemployer');
+                break;
+
+            case "signupemployee":
+                this.props.history.push('/signupemployee');
+                break;
+
+            default:
+                this.props.history.push('/signupemployee');
+                break;
+        }
+    };
 
     render() {
         return (
@@ -19,7 +46,7 @@ class SignUpSelection extends React.Component {
                         </Link>
 
                         <div className="ps-page__actions">
-                            <Link className="ps-btn ps-btn--outline ps-btn--white" to="/loginemployee">Login</Link>
+                            <Link className="ps-btn ps-btn--outline ps-btn--white" to="/login">Login</Link>
                         </div>
                     </div>
 
@@ -30,29 +57,34 @@ class SignUpSelection extends React.Component {
                                 <h5>Join the million of people <br /> using Jobolt.</h5>
                                 <p>I want to</p>
                             </div>
+
                             <div className="ps-form__content">
                                 <div className="ps-radio ps-radio--circle">
-                                    <input className="form-control" type="radio" id="signup-selection-1" name="signup-selection" />
-                                        <label htmlFor="signup-selection-1"><span
-                                            className="title">Employers Account</span>
-                                            <small>Consectetur adipiscing elit. Ut accumsan quam in diam porta, quis
-                                                hendrerit urna eleifend.
-                                            </small>
-                                        </label>
+                                    <input className="form-control" type="radio"
+                                           value="signupemployer"
+                                           onChange={this.handleInput}
+                                           checked={this.state.selectedvalue === "signupemployer"}
+                                           id="signup-selection-1"
+                                           name="signupemployer" />
+                                    <label htmlFor="signup-selection-1"><span
+                                        className="title">Employers Account</span>
+                                    </label>
                                 </div>
+
                                 <div className="ps-radio ps-radio--circle">
-                                    <input className="form-control" type="radio" id="signup-selection-2"
-                                           name="signup-selection" />
-                                        <label htmlFor="signup-selection-2"><span
-                                            className="title">Freelancer Account</span>
-                                            <small>Auis hendrerit urna eleifend. Cras eget velit non leo malesuada
-                                                ullamcorper. Phasellus facilisis et dui id maximus.
-                                            </small>
-                                        </label>
+                                    <input className="form-control" type="radio"
+                                           value="signupemployee"
+                                           onChange={this.handleInput}
+                                           checked={this.state.selectedvalue === "signupemployee"}
+                                           id="signup-selection-2"
+                                           name="signupemployee" />
+                                    <label htmlFor="signup-selection-2"><span
+                                        className="title">Freelancer Account</span>
+                                    </label>
                                 </div>
                             </div>
                             <div className="ps-form__footer">
-                                <Link className="ps-btn ps-btn--black" to="/signupemployee">Next</Link>
+                                <button className="ps-btn ps-btn--black" onClick={this.handleSignUpSelection}>Next</button>
                             </div>
                         </form>
                     </div>
@@ -65,21 +97,6 @@ class SignUpSelection extends React.Component {
                             <li><Link to="#">Partners</Link></li>
                         </ul>
                         <p>Jobolt © 2017 Copyright by Jobolt Co, JP. All Rights Reserved.</p>
-                    </div>
-                </div>
-                <div id="back2top"><i className="pe-7s-angle-up"></i></div>
-                <div className="ps-site-overlay"></div>
-                <div id="loader-wrapper">
-                    <div className="loader-section section-left"></div>
-                    <div className="loader-section section-right"></div>
-                </div>
-                <div className="ps-search" id="site-search">
-                    <Link className="ps-btn--close" to="#"></Link>
-                    <div className="ps-search__content">
-                        <form className="ps-form--primary-search">
-                            <input className="form-control" type="text" placeholder="Search for..." />
-                                <button><i className="fa fa-search"></i></button>
-                        </form>
                     </div>
                 </div>
             </section>
