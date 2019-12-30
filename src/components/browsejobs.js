@@ -18,7 +18,7 @@ class BrowseJobs extends React.Component {
                     <div className="ps-section--top bg--cover" style={{backgroundImage: "url('assets/img/bg/pages/brow-employers.jpg')"}}>
                         <div className="container">
                             <div className="ps-section__header">
-                                <p>BROWSE <br/> Jobs</p>
+                                <p>Browse <br/> Jobs</p>
                             </div>
                             <div className="ps-section__content">
                                 <form className="ps-form--home-find-job ps-form--top"
@@ -31,8 +31,6 @@ class BrowseJobs extends React.Component {
                                                placeholder="Enter job title, position, skills..." />
                                             <button className="ps-btn ps-btn--gradient">Find Job</button>
                                     </div>
-                                    <p>Update the latest jobs and announcements from Jobolt.<Link to="#"> Join us
-                                        today</Link></p>
                                 </form>
                             </div>
                         </div>

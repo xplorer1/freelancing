@@ -17300,3 +17300,7 @@ html .bg--parallax {
   display: flex;
   align-items: center;
 }
+
+.spinner-grow {
+  vertical-align: middle !important;
+}

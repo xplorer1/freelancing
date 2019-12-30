@@ -13,6 +13,7 @@ import SignUpSelection from "./components/signupselection";
 import SignUpEmployee from "./components/signupemployee";
 import SignUpEmployer from "./components/signupemployer";
 import PostJob from "./components/postajob";
+import EmployerDashboard from "./components/employerdashboard";
 
 function App() {
     return (
@@ -30,6 +31,7 @@ function App() {
 				<Route path="/signupemployee" component = {SignUpEmployee} />
 				<Route path="/signupemployer" component = {SignUpEmployer} />
 				<Route path="/postjob" component = {PostJob} />
+				<Route path="/employerdashboard" component = {EmployerDashboard} />
 			</Switch>
         </Router>
     )

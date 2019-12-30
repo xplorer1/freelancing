@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import alertify from "alertifyjs";
 
 class SignUpSelection extends React.Component {
     constructor(props) {
@@ -20,18 +21,22 @@ class SignUpSelection extends React.Component {
         e.preventDefault();
         let destination = this.state.selectedvalue;
 
-        switch (destination) {
-            case "signupemployer":
-                this.props.history.push('/signupemployer');
-                break;
+        if(destination) {
+            switch (destination) {
+                case "signupemployer":
+                    this.props.history.push('/signupemployer');
+                    break;
+                case "signupemployee":
+                    this.props.history.push('/signupemployee');
+                    break;
+                default:
+                    this.props.history.push('/signupemployee');
+                    break;
+            }
+        }
 
-            case "signupemployee":
-                this.props.history.push('/signupemployee');
-                break;
-
-            default:
-                this.props.history.push('/signupemployee');
-                break;
+        else {
+            alertify.error("Please select an account type to proceed.")
         }
     };
 
@@ -54,7 +59,7 @@ class SignUpSelection extends React.Component {
                         <form className="ps-form--signup-selection bg--gradient">
                             <div className="ps-form__header">
                                 <h3>Sign up for free.</h3>
-                                <h5>Join the million of people <br /> using Jobolt.</h5>
+                                <h5>Join the millions of people <br /> using Jobolt.</h5>
                                 <p>I want to</p>
                             </div>
 
@@ -101,6 +106,11 @@ class SignUpSelection extends React.Component {
                 </div>
             </section>
         )
+    }
+
+    componentDidMount() {
+        this.setState({ ajaxloading: true });
+        alertify.set('notifier','position', 'top-right');
     }
 }
 export default SignUpSelection;
