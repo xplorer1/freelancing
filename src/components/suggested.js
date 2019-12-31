@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import {Utilities} from "./home";
 
-class EmployerDashboard extends React.Component {
+class Suggested extends React.Component {
     constructor(props) {
         super(props);
 
@@ -24,7 +24,7 @@ class EmployerDashboard extends React.Component {
 
                                         <div className="col-sm-5 owname">
                                             <div className="ps-form__footer">
-                                                <h3 className="widget-title">Starks Corps</h3>
+                                                <h3 className="widget-title">James Ighenegbu</h3>
                                             </div>
                                         </div>
 
@@ -171,4 +171,4 @@ class EmployerDashboard extends React.Component {
         )
     }
 }
-export default EmployerDashboard;
+export default Suggested;

@@ -17309,3 +17309,7 @@ html .bg--parallax {
     display: flex;
     flex-direction: column-reverse;
 }
+
+.cp {
+    cursor: pointer;
+}

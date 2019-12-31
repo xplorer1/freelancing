@@ -20,31 +20,38 @@ class PostJob extends React.Component {
                             <div className="ps-section__container">
                                 <div className="ps-section__content">
                                     <form className="ps-form--post-Link-job">
-                                        <h3>Post Link Job to Jobolt</h3>
+                                        <h3>Post a Job to Jobolt</h3>
                                         <div className="form-group">
                                             <label>Job Title</label>
-                                            <input className="form-control" type="text"
+                                            <input className="form-control rounded" type="text"
                                                    placeholder="e.g Senior Product Designer" />
                                         </div>
                                         <div className="form-group">
                                             <label>Descrition</label>
-                                            <textarea className="form-control" rows="6"
+                                            <textarea className="form-control rounded" rows="6"
                                                       placeholder="Enter your description here"></textarea>
                                             <small><i>4700 characters remaining</i></small>
                                         </div>
                                         <div className="ps-form__rules">
                                             <div className="form-group">
                                                 <label>Primary Role</label>
-                                                <div className="ps-form__rule">
-                                                    <select className="ps-select">
-                                                        <option value="1">Select Primary Role</option>
-                                                        <option value="1">Role 1</option>
-                                                        <option value="1">Role 2</option>
-                                                        <option value="1">Role 3</option>
-                                                    </select>
-                                                    <div className="ps-form__rule-action"><Link to="#"><i
-                                                        className="ps-icon--plus"></i><span>  Add Other Roles</span></Link>
+
+
+
+                                                <div className="ps-form__rule row">
+                                                    <div className="col-sm">
+                                                        <select className="ps-select">
+                                                            <option value="1">Select Primary Role</option>
+                                                            <option value="1">Role 1</option>
+                                                            <option value="1">Role 2</option>
+                                                            <option value="1">Role 3</option>
+                                                        </select>
                                                     </div>
+
+                                                    <div className="col-sm ps-form__rule-action"><Link to="#"><i
+                                                        className="ps-icon--plus"></i><span style={{lineHeight: "2.2"}}>  Add Other Roles</span></Link>
+                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -72,18 +79,24 @@ class PostJob extends React.Component {
                                             <div className="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 ">
                                                 <div className="form-group form-group--range">
                                                     <label>Salary Range</label>
-                                                    <div className="form-group__content">
-                                                        <div className="ps-form__range">
-                                                            <figure>
-                                                                <input className="form-control" type="text"
+                                                    <div className="form-group__content row">
+
+                                                        <div className="col-sm-9 row ps-form__range">
+                                                            <figure className="col-sm">
+                                                                <input className="form-control rounded h-100" type="text"
                                                                        placeholder="$" />
                                                             </figure>
-                                                            <figure>
-                                                                <input className="form-control" type="text"
+
+                                                            <span style={{fontSize: "19pt"}}> - </span>
+
+                                                            <figure className="col-sm">
+                                                                <input className="form-control rounded h-100" type="text"
                                                                        placeholder="$" />
                                                             </figure>
+
                                                         </div>
-                                                        <div className="form-group__currency">
+
+                                                        <div className="col-sm-3 form-group__currency h-100">
                                                             <select className="ps-select">
                                                                 <option value="1">USD</option>
                                                                 <option value="1">VND</option>
@@ -96,26 +109,23 @@ class PostJob extends React.Component {
                                         </div>
                                         <div className="form-group">
                                             <label>Skills Required</label>
-                                            <input className="form-control" type="text" placeholder="e.g Hanoi" />
+                                            <input className="form-control rounded" type="text" placeholder="e.g Hanoi" />
                                         </div>
                                         <div className="ps-form__submit">
                                             <button className="ps-btn ps-btn--gradient" type="button">Post Job Now
                                             </button>
-                                            <button className="ps-btn ps-btn--white ps-btn--shadow" type="reset">Post
-                                                Job Now
-                                            </button>
                                         </div>
                                     </form>
                                 </div>
+
                                 <div className="ps-section__sidebar">
                                     <aside className="widget widget_profile widget_progress">
                                         <div className="ps-block--user">
                                             <div className="ps-block__thumbnail">
                                                 <img src="assets/img/users/1.jpg" alt="" />
                                             </div>
-                                            <div className="ps-block__content">
-                                                <p><strong>Wellcome back</strong></p>
-                                                <h4>John Herrry</h4><Link to="#">View your profile<i
+                                            <div className="ps-block__content mt-4">
+                                                <h4>Starks Corps</h4><Link to="#">View your profile<i
                                                 className="fa fa-caret-right"></i></Link>
                                             </div>
                                         </div>
@@ -126,27 +136,6 @@ class PostJob extends React.Component {
                                             </div>
                                         </div>
                                         <Link to="#">Add your address ( +5% )</Link>
-                                    </aside>
-                                    <aside className="widget widget_profile widget_connections">
-                                        <h3 className="widget-title">Connections</h3>
-                                        <div className="widget__content">
-                                            <div className="row">
-                                                <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 ">
-                                                    <p className="ps-connections">
-                                                        <Link to="#"><img src="assets/img/pages/profile/connection-1.jpg" alt=""/></Link>
-                                                        <Link to="#"><img src="assets/img/pages/profile/connection-2.jpg" alt="" /></Link>
-                                                        <Link to="#"><img src="assets/img/pages/profile/connection-3.jpg" alt="" /></Link>
-                                                        <Link to="#"><img src="assets/img/pages/profile/connection-4.jpg" alt="" /></Link>
-                                                    </p>
-                                                </div>
-                                                <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 ">
-                                                    <p>163 Connections <br/> 290 Followers <br/> 36 Following</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="widget__footer">
-                                            <p>To see more people</p><Link className="ps-btn" to="#">Add connections</Link>
-                                        </div>
                                     </aside>
                                     <aside className="widget widget_profile widget_people">
                                         <h3 className="widget-title">Who Viewed me
@@ -168,7 +157,7 @@ class PostJob extends React.Component {
                     </div>
                 </div>
 
-                <Utilities.AuthFooter />
+                <Utilities.InnerPagesFooter />
 
             </section>
         )
