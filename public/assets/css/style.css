@@ -17304,3 +17304,8 @@ html .bg--parallax {
 .spinner-grow {
   vertical-align: middle !important;
 }
+
+.owname {
+    display: flex;
+    flex-direction: column-reverse;
+}

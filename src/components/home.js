@@ -228,6 +228,36 @@ const Utilities = {
         )
     },
 
+    InnerPagesFooter: function () {
+        return (
+            <footer className="ps-footer">
+                <div className="container">
+                    <Link className="ps-logo hm" to="/">Jobolt</Link>
+
+                    <div className="ps-footer__bottom">
+                        <figure>
+                            <p>&copy; 2019 <Link to="/">Jobolt</Link> - All Rights Reserved.</p>
+                        </figure>
+                        <figure>
+                            <div className="ps-footer__language"><span>Language:</span>
+                                <select className="ps-select">
+                                    <option value="1">English</option>
+                                    <option value="1">Vietnamese</option>
+                                </select>
+                            </div>
+                            <ul className="ps-list--social">
+                                <li><a href="#"><i className="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i className="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i className="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i className="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </figure>
+                    </div>
+                </div>
+            </footer>
+        )
+    },
+
     AuthFooter: function () {
         return (
             <footer className="ps-footer">
@@ -458,7 +488,7 @@ class Home extends React.Component {
                     </div>
                     <div className="ps-home-join-us">
                         <div className="container">
-                            <p>Millions of small businesses use <br/> Freelancer to turn their ideas into reality</p><a className="ps-btn ps-btn--gradient ps-btn--lg" href="#">Join Jobolt today</a>
+                            <p>Millions of small businesses use <br/> Freelancer to turn their ideas into reality</p><Link className="ps-btn ps-btn--gradient ps-btn--lg" to="/signupselection">Join Jobolt today</Link>
                         </div>
                     </div>
 

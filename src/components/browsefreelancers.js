@@ -102,6 +102,7 @@ class BrowseFreelancers extends React.Component {
                                     </div>
                                     <div className="ps-section__items">
                                         <h4 className="ps-heading--2 mb-40">172 results</h4>
+                                        
                                         <div className="ps-freelancer">
                                             <div className="ps-freelancer__thumbnail">
                                                 <img src="assets/img/users/1.jpg" alt="" />
@@ -119,6 +120,7 @@ class BrowseFreelancers extends React.Component {
                                                     around the globe</p>
                                             </div>
                                         </div>
+
                                         <div className="ps-freelancer">
                                             <div className="ps-freelancer__thumbnail">
                                                 <img src="assets/img/users/2.jpg" alt="" />
